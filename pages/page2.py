@@ -1,3 +1,9 @@
+#AI was used in multiple sections of making this portion of the project. It helped me get the right code to ensure the song being selected for each country was using the idmax feature.
+#It also help us isolate the countries to make sure we were selecting the correct country with the right data, and giving it the color of spotify's logo.
+#Making the map of the world AI helped with things like the hover template, and making sure that the popularity score, as well as the song name and artist showed up.
+#The list portion of this tab AI was used to make sure every peice of data was organized and alphabetical.
+
+
 from dash import html, dcc, callback, Output, Input, register_page
 import pandas as pd
 import plotly.express as px
