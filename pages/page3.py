@@ -1,4 +1,3 @@
-
 # Packages
 import dash
 from dash import html, dcc, Input, Output, State
@@ -54,8 +53,6 @@ layout = html.Div([
     html.Div(id="list"),
 ])
 
-# Layout 
-
 @dash.callback(
     Output("chart", "figure"),
     Output("list", "children"),
@@ -67,6 +64,7 @@ layout = html.Div([
 def show_top_tracks(_, artist_name):
     if not artist_name:
         return go.Figure(), "", "Please enter an artist name."
+    
     artist = find_artist(artist_name)
     if not artist:
         return go.Figure(), "", "Artist not found."
@@ -75,13 +73,42 @@ def show_top_tracks(_, artist_name):
     if not tracks:
         return go.Figure(), "", "No top tracks found."
 
+    # Chart
     names = [t["name"] for t in tracks]
     pops  = [t["popularity"] for t in tracks]
-
-    fig = go.Figure(go.Bar(x=names, y=pops))
+    fig = go.Figure(go.Bar(x=names, y=pops, marker_color="green"))
     fig.update_layout(title=f"Top Tracks — {artist['name']}")
 
-    links = [html.Li(html.A(t["name"], href=t["external_urls"]["spotify"], target="_blank")) for t in tracks]
-    return fig, html.Ul(links), f"Showing {artist['name']}'s top tracks."
+    # Buttons (must be inside the function)
+    links = html.Ul(
+        [
+            html.Li(
+                html.A(
+                    html.Button(
+                        t["name"],
+                        style={
+                            "backgroundColor": "white",
+                            "color": "limegreen",
+                            "border": "none",
+                            "padding": "8px 12px",
+                            "cursor": "pointer",
+                            "fontSize": "14px",
+                            "margin": "2px 0",
+                            "borderRadius": "4px"
+                        }
+                    ),
+                    href=t["external_urls"]["spotify"],
+                    target="_blank",
+                    style={
+                        "textDecoration": "none",
+                        "color": "limegreen",
+                        "backgroundColor": "white",
+                        "display": "inline-block"
+                    }
+                )
+            )
+            for t in tracks
+        ]
+    )
 
-
+    return fig, links, f"Showing {artist['name']}'s top tracks."
