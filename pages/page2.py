@@ -1,11 +1,10 @@
-# AI was used in multiple sections of making this portion of the project. 
-# It helped me get the right code to ensure the song being selected for each country was using the idxmax feature. 
+# Helped get the right code to ensure the song being selected for each country was using the idxmax feature. 
 # It also helped us isolate the countries to make sure we were selecting the correct country with the right data, and giving it the color of Spotify's logo. 
 # Making the map of the world, AI helped with things like the hover template, and making sure that the popularity score, as well as the song name and artist, showed up. 
 # The list portion of this tab, AI was used to make sure every piece of data was organized and alphabetical. 
 # AI also guided us in using pycountry’s fuzzy matching so that country names could be converted into the correct ISO-3 codes for mapping. 
 # It suggested layout styling such as scrollable lists, margins, and background colors so the song list was easier to read and matched the theme of the app. 
-# Finally, AI helped with cleaning the data by suggesting the conversion of popularity scores to numeric values and dropping rows with missing data, which made the map display more reliable.
+# AI helped with cleaning the data by suggesting the conversion of popularity scores to numeric values and dropping rows with missing data, which made the map display more reliable.
 
 
 
