@@ -75,8 +75,12 @@ layout = html.Div(children=[
     prevent_initial_call=True,
 )
 def compare_songs(_, a_title, b_title):
-    fig = px.bar(pd.DataFrame({"Song": [], "Popularity": []}), x="Song", y="Popularity",
-                 title="Enter two song titles and click Compare")
+    fig = px.bar(
+        pd.DataFrame({"Song": [], "Popularity": []}),
+        x="Song", y="Popularity",
+        title="Enter two song titles and click Compare",
+        color_discrete_sequence=["green"]  # ensure green bars even when empty
+    )
 
     if not a_title or not b_title:
         return fig, "Please enter both song titles."
@@ -106,7 +110,8 @@ def compare_songs(_, a_title, b_title):
             y="Popularity",
             title="Spotify Popularity (0–100)",
             labels={"Song": "Song", "Popularity": "Popularity (0–100)"},
-            range_y=[0, 100]
+            range_y=[0, 100],
+            color_discrete_sequence=["green"]  # ✅ force bars to be green
         )
         fig.update_layout(margin=dict(l=10, r=10, t=50, b=80), xaxis_tickangle=30)
 
