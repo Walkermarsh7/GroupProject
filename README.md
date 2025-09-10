@@ -3,7 +3,7 @@
 ## Project Overview  
 The inspiration for our project came from our orientation scavenger hunt, where we kept debating which artists were more popular and which songs “won” in different contexts. We wanted a way to actually test those debates with data, which led to the idea of a Spotify dashboard.  
 
-The app has four pages, each highlighting a different angle: top artists by genre, a global map of songs by country, artist-level top tracks, and a direct comparison of two songs. The intended audience includes casual Spotify users, classmates, and anyone interested in exploring music trends visually. The value of the project is that it makes Spotify’s raw data interactive and engaging, so people can explore music popularity instead of arguing about it without evidence.  
+The app has four pages, each highlighting a different angle: top artists by genre, a direct comparison of two songs, a global map of songs by country, and artist-level top tracks. The intended audience includes casual Spotify users such as our classmates, and anyone interested in exploring music trends visually such as aspiring musicians, music analysts, and content creators. The value of the project is that it makes Spotify’s raw data interactive and engaging, so people can explore music popularity instead of arguing about it without evidence.  
 
 ## How to Run Locally and Make Live  
 To run the app on your computer, clone the repository and set up a Python environment. Install the requirements from `requirements.txt`, then start the server with:
