@@ -1,3 +1,9 @@
+# AI helped us set up the Spotify client credentials flow so that tokens would refresh properly when making requests to the API. 
+# Ai guided us in writing the callback that searches for an artist, retrieves their top tracks, and pulls back details like track name, popularity, and Spotify links. 
+# It Suggested how to build the bar chart visualization of popularity scores, as well as the layout for showing clickable track links underneath. 
+# Helped add checks so the app would not break if an artist search failed or returned incomplete data.
+
+
 # Packages
 import dash
 from dash import html, dcc, Input, Output, State
@@ -112,3 +118,4 @@ def show_top_tracks(_, artist_name):
     )
 
     return fig, links, f"Showing {artist['name']}'s top tracks."
+
