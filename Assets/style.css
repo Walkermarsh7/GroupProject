@@ -1,0 +1,108 @@
+/* -------- Body & Layout -------- */
+body {
+    background-color: #191414; /* Spotify dark black */
+    color: #1DB954; /* Spotify green */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------- Headers -------- */
+h1, h2, h3, h4 {
+    color: #1DB954;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* -------- Dropdowns -------- */
+.Select-control, .Select-placeholder, .Select-value {
+    color: #1DB954 !important;
+    background-color: #121212 !important;
+}
+
+.Select-menu-outer {
+    background-color: #121212 !important;
+    color: #1DB954 !important;
+}
+
+/* -------- Cards / Artist Boxes -------- */
+.card {
+    background-color: #121212;
+    border: 1px solid #1DB954;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card texts */
+.card h3 {
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.card p {
+    color: #B3B3B3;
+}
+
+/* -------- Images -------- */
+.card img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* -------- Graphs / Figures -------- */
+.plotly-graph-div {
+    background-color: #191414 !important;
+    color: #1DB954 !important;
+}
+
+.main-svg {
+    background-color: #191414 !important;
+}
+
+/* Axis and grid lines */
+g.tick text {
+    fill: #FFFFFF !important;
+}
+
+path.domain {
+    stroke: #1DB954 !important;
+}
+
+line.grid {
+    stroke: #333 !important;
+}
+
+/* -------- Buttons -------- */
+button {
+    background-color: #1DB954;
+    color: #191414;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1ed760;
+}
+
+/* -------- Links -------- */
+a {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
