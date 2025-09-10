@@ -8,7 +8,7 @@ The app has four pages, each highlighting a different angle: top artists by genr
 ## How to Run Locally and Make Live  
 To run the app on your computer, clone the repository and set up a Python environment. Install the requirements from `requirements.txt`, then start the server with:
 
-The dashboard will open in a browser at [http://127.0.0.1:8050](http://127.0.0.1:8050).
+The dashboard will open in a browser at https://spotify-analytics-dashboard-i1lz.onrender.com/.
 
 Because the app uses Spotify’s API, you’ll need to register for a free developer account with Spotify and create an app to get a `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET`. These should be stored as environment variables so the app can authenticate properly.
 
