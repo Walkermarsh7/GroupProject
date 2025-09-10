@@ -31,7 +31,6 @@ navbar = dbc.Navbar(
     dbc.Container(
         dbc.Row(
             [
-                dbc.Col(dbc.NavLink("Home", href="/home", active="exact", style={"textAlign": "center"})),
                 dbc.Col(dbc.NavLink("Top Artists", href="/", active="exact", style={"textAlign": "center"})),
                 dbc.Col(dbc.NavLink("Popularity", href="/page4", active="exact", style={"textAlign": "center"})),
                 dbc.Col(dbc.NavLink("Songs Around the World", href="/page2", active="exact", style={"textAlign": "center"})),
