@@ -1,3 +1,9 @@
+# Ai helped us create the dictionary of genres linked to popular artists and set up the dropdown so the correct artists would load for each genre. 
+# AI guided us on how to call the Spotify API for each artist to pull back their name, popularity score, and image, and then how to display that information. 
+# It also suggested the card layout for showing the top three artists, making sure the images, names, and popularity scores were aligned and styled consistently. 
+# It also helped with adding basic error handling in case Spotify did not return an image or if popularity data was missing.
+
+
 import dash
 from dash import dcc, html, Input, Output
 import spotipy
