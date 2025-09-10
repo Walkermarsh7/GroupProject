@@ -31,7 +31,7 @@ From the Spotify API we also used:
 - `genres`: list of genres associated with an artist  
 - `images`: URLs to artist or album images  
 
-Together these sources let us use the dashboard to answer questions like *“Who are the biggest artists in each genre?”*, *“What songs dominate around the world?”*, and *“Which of two tracks is more popular right now?”*  
+Together these sources let us use the dashboard to answer questions like “Who are the biggest artists in each genre?”, “What songs dominate around the world?”, and “Which of two tracks is more popular right now?”
 
 ## AI Appendix
 
