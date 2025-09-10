@@ -1,10 +1,18 @@
+# Used AI to help us set up the Spotify authentication flow, including writing the code for caching and refreshing tokens so that requests would not fail. 
+# AI guided the creation of the search functions that locate the two songs entered by the user and return their popularity scores. 
+# Suggested how to structure the callback so that when both songs are entered, the results display together instead of separately. 
+# Also provided the code for building the comparison bar chart, ensuring the popularity values were shown side by side with labels. 
+# It helped us add layout styling so that the chart and results look clean and consistent with the rest of the dashboard. 
+# Also assisted in writing error handling so that the page displays clear messages when invalid input is given, when a song is not found, or when Spotify returns incomplete data.
+
+
 # pages/page4.py
 import time, base64, requests
 import pandas as pd
 import plotly.express as px
 from dash import html, dcc, register_page, callback, Input, Output, State
 
-# ---------- Register page ----------
+
 register_page(
     __name__,
     path="/page4",
@@ -12,11 +20,11 @@ register_page(
     title="Compare Songs Popularity"
 )
 
-# ---------- Spotify credentials ----------
+
 SPOTIFY_CLIENT_ID = "525eeb52425e485ab2635d4fd17a09bb"
 SPOTIFY_CLIENT_SECRET = "1ab191a21a554e90b3f1cde668d9c7c4"
 
-# ---- Tiny token cache ----
+
 _token = {"access_token": None, "exp": 0}
 
 def _auth_headers():
@@ -52,7 +60,7 @@ def _search_track(title: str, limit=1, market="US"):
     items = r.json().get("tracks", {}).get("items", [])
     return items[0] if items else None
 
-# ---------- Layout ----------
+
 layout = html.Div(children=[
     html.H2("Which Song Is More Popular Right Now?"),
     html.Div([
@@ -65,7 +73,7 @@ layout = html.Div(children=[
     dcc.Graph(id="song-graph"),
 ])
 
-# ---------- Callback ----------
+
 @callback(
     Output("song-graph", "figure"),
     Output("song-status", "children"),
@@ -128,3 +136,4 @@ def compare_songs(_, a_title, b_title):
         return fig, f"Spotify API error: {e}"
     except Exception as e:
         return fig, f"Error: {e}"
+
